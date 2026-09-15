@@ -3,398 +3,949 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Café Xixi</title>
+    <title>Café Xixi | Minimalist Artisanal Coffee & Pastries</title>
     
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="upgradedxixiweb.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style1.css">
+
 
 </head>
 <body>
 
-    <!-- header chaka nav -->
+    <!-- ANNOUNCEMENT BAR (Placed top of page) -->
+    <div class="announcement-bar">
+        <i data-lucide="sparkles" style="width: 0.875rem; height: 0.875rem; color: var(--amber-400);"></i>
+        <span><strong>Special Offer:</strong> Get 20% off all catering packages booked this week! Use code <strong>XIXI20</strong></span>
+    </div>
+
+    <!-- Header Navigation -->
     <header>
-        <div class="container nav-container">
-            <a href="#" class="logo">
-                <img src="xixicafe.png" alt="Café Xixi Logo">
-                Café Xixi
-            </a>
-            
-            </button>
-            <nav class="nav-links" id="navLinks">
-                <a href="#about">Our Story</a>
-                <a href="#media">Inside our Café</a>
-                <a href="#featured">Signature Drink</a>
-                <a href="#menu">Menu</a>
-                <a href="#events">Catering</a>
-                <a href="#contact">Contact</a>
-            </nav>
+        <div class="container">
+            <div class="nav-inner">
+                <!-- Brand Logo -->
+                <a href="#" class="brand-logo">
+                    <div class="logo-badge"><img src="xixicafe.png" alt=""></div>
+                    <span class="logo-title">Café Xixi</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="nav-links">
+                    <a href="#about">Our Story</a>
+                    <a href="#media">Inside Café</a>
+                    <a href="#featured">Signature</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#events">Catering</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <!-- Actions -->
+                <div class="nav-actions">
+                    <button class="cart-toggle-btn" onclick="toggleCart()" aria-label="Open Cart">
+                        <i data-lucide="shopping-bag" style="width: 1.25rem; height: 1.25rem;"></i>
+                        <span class="cart-badge" id="cartBadgeCount">0</span>
+                    </button>
+                    <a href="#menu" class="btn-order-nav">
+                        Order Online
+                    </a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container">
-        <!-- hero -->
-        <section class="hero">
-            <div class="hero-text">
-                <h1>A minimalist escape in every sip.</h1>
-                <p>Serving small-batch roasts and artisanal pastries crafted with care for your daily coffee ritual.</p>
-                <div class="hero-buttons">
-                    <a href="#menu" class="button">Explore Menu <i data-lucide="arrow-right"></i></a>
-                    <a href="#events" class="button button-outline">Book Catering</a>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="blur-blob-1"></div>
+            <div class="blur-blob-2"></div>
+
+            <div class="container" style="width: 100%;">
+                <div class="hero-grid">
+                    
+                    <!-- Left Hero Content -->
+                    <div class="hero-left">
+                        <div class="pill-tag">
+                            <i data-lucide="coffee" style="width: 1rem; height: 1rem; color: var(--roast-600);"></i> Artisanal Coffee Rituals
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            A minimalist escape in <span class="highlight">every sip.</span>
+                        </h1>
+                        
+                        <p class="hero-desc">
+                            Serving small-batch roasts and artisanal pastries crafted with care for your daily coffee ritual. Experience ethical sourcing meets clean, modern warmth.
+                        </p>
+                        
+                        <div class="hero-actions">
+                            <a href="#menu" class="btn-primary">
+                                Explore Menu 
+                                <i data-lucide="arrow-right" style="width: 1.25rem; height: 1.25rem; margin-left: 0.5rem;"></i>
+                            </a>
+                            <a href="#events" class="btn-secondary">
+                                Book Catering
+                            </a>
+                        </div>
+
+                        <!-- Rating Badge -->
+                        <div class="hero-rating">
+                            <div class="stars">
+                                <i data-lucide="star" class="star-icon"></i>
+                                <i data-lucide="star" class="star-icon"></i>
+                                <i data-lucide="star" class="star-icon"></i>
+                                <i data-lucide="star" class="star-icon"></i>
+                                <i data-lucide="star" class="star-icon"></i>
+                                <span style="margin-left: 0.25rem; font-weight: 700; color: var(--roast-900);">4.9/5.0</span>
+                            </div>
+                            <span style="color: var(--roast-300);">|</span>
+                            <span>1,200+ Coffee Lovers Served</span>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Display -->
+                    <div class="hero-right">
+                        <div class="hero-img-wrapper">
+                            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=80"
+                                 alt="Café Xixi Interior Aesthetic" 
+                                 class="hero-img">
+                            <div class="img-overlay"></div>
+                        </div>
+
+                        <!-- Floating Card 1 -->
+                        <div class="floating-card-1 glass-card">
+                            <div class="card-icon-bg">
+                                <i data-lucide="sparkles" style="width: 1.5rem; height: 1.5rem;"></i>
+                            </div>
+                            <div>
+                                <p style="font-size: 0.75rem; color: var(--roast-600); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Fresh Batch</p>
+                                <p style="font-size: 0.875rem; font-weight: 700; color: var(--roast-950);">Ethically Sourced Beans</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Card 2 -->
+                        <div class="floating-card-2 glass-card">
+                            <div class="status-dot"></div>
+                            <span style="font-size: 0.75rem; font-weight: 700; color: var(--roast-900);">Open Daily: 7 AM - 8 PM</span>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <img src="xixicafe.png" alt="Café Xixi Interior" class="hero-image">
             </div>
         </section>
 
-        <!-- meet the team and about  -->
-        <section id="about">
-            <div class="about-grid">
-                <div>
-                    <h2>Our Story & Mission</h2>
-                    <p style="margin: 1rem 0; color: var(--text-muted);">At Café Xixi, we believe coffee is more than just a morning routine—it is a ritual. Founded with a passion for clean aesthetics and ethical sourcing, we partner directly with independent farmers across Latin America and East Africa.</p>
-                    <p style="color: var(--text-muted);">Our mission is to serve exceptional, sustainably sourced coffee in a warm, minimalist environment that fosters community and genuine connection.</p>
-                </div>
+        <!-- Our Story & Team Section -->
+        <section id="about" class="section-padding bg-roast-light">
+            <div class="container">
                 
-                <div class="team-card">
-                    <div>
-                        <h3>Meet The Team</h3>
-                        <p style="margin-top: 0.3rem; color: var(--text-muted); font-size: 0.9rem;">The passionate 6-member team crafting perfection in every cup and bite.</p>
+                <div class="about-grid">
+                    <div class="about-col-1">
+                        <span class="section-subtitle">Our Heritage & Mission</span>
+                        <h2 class="section-title">
+                            Crafting community through ethical coffee rituals.
+                        </h2>
                     </div>
-                    
+                    <div class="about-col-2 text-roast-800" style="font-size: 1rem; line-height: 1.625;">
+                        <p style="margin-bottom: 1rem;">
+                            At <strong style="color: var(--roast-950); font-weight: 600;">Café Xixi</strong>, we believe coffee is more than just a morning routine—it is a sacred daily ritual. Founded with a passion for clean aesthetics and ethical sourcing, we partner directly with independent family farms across Latin America and East Africa.
+                        </p>
+                        <p>
+                            Our mission is simple: serve exceptional, sustainably grown coffee in a warm, minimalist environment that fosters genuine human connection and lingering conversations.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Values Cards -->
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon-box">
+                            <i data-lucide="award" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h3 class="font-serif" style="font-size: 1.25rem; font-weight: 700; color: var(--roast-950); margin-bottom: 0.75rem;">Master Craftsmanship</h3>
+                        <p class="text-roast-800" style="font-size: 0.875rem;">
+                            We meticulously measure, grind, and brew every single cup with calibrated precision to highlight peak natural notes.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon-box">
+                            <i data-lucide="globe" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h3 class="font-serif" style="font-size: 1.25rem; font-weight: 700; color: var(--roast-950); margin-bottom: 0.75rem;">Direct Ethical Trade</h3>
+                        <p class="text-roast-800" style="font-size: 0.875rem;">
+                            Direct partnerships ensuring living wages and environmental stewardship for coffee farming families worldwide.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon-box">
+                            <i data-lucide="heart" style="width: 1.5rem; height: 1.5rem;"></i>
+                        </div>
+                        <h3 class="font-serif" style="font-size: 1.25rem; font-weight: 700; color: var(--roast-950); margin-bottom: 0.75rem;">Inclusive Space</h3>
+                        <p class="text-roast-800" style="font-size: 0.875rem;">
+                            Designing welcoming, minimalist sanctuaries crafted for shared moments, quiet contemplation, and creative ideas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Grid -->
+                <div class="team-box">
+                    <div class="text-center-block" style="margin-bottom: 3rem;">
+                        <span class="section-subtitle">The Artisans Behind The Bar</span>
+                        <h3 class="font-serif" style="font-size: 1.875rem; font-weight: 700; color: var(--roast-950); margin-top: 0.5rem;">Meet Our Dedicated Team</h3>
+                        <p class="text-roast-800" style="font-size: 0.875rem; margin-top: 0.5rem;">The passionate 6-member team crafting perfection in every single cup and artisanal bite.</p>
+                    </div>
+
                     <div class="team-grid">
                         <div class="team-member">
-                            <img src="bazi.jpg" class="team-avatar">
-                            <h4>Bazil Domeyeg</h4>
-                            <span class="team-role">Head Barista</span>
+                            <div class="avatar">
+                                <img src="bazi1.jpg" alt="Bazil Domeyeg">
+                            </div>
+                            <h4 class="font-bold text-roast-950" style="font-size: 1rem;">Bazil Domeyeg</h4>
+                            <p class="text-roast-600" style="font-size: 0.75rem; font-weight: 500;">Head Barista</p>
                         </div>
+
                         <div class="team-member">
-                            <img src="renz.jpg" class="team-avatar">
-                            <h4>Renz Ancog</h4>
-                            <span class="team-role">Manager</span>
+                            <div class="avatar">
+                                <img src="renz.jpg" alt="Renz Ancog">
+                            </div>
+                            <h4 class="font-bold text-roast-950" style="font-size: 1rem;">Renz Ancog</h4>
+                            <p class="text-roast-600" style="font-size: 0.75rem; font-weight: 500;">Manager</p>
                         </div>
+
                         <div class="team-member">
-                            <img src="jared.jpg" class="team-avatar">
-                            <h4>Jared Chavez </h4>
-                            <span class="team-role">Pastry Chef</span>
+                            <div class="avatar">
+                                <img src="jared.jpg" alt="Jared Chavez">
+                            </div>
+                            <h4 class="font-bold text-roast-950" style="font-size: 1rem;">Jared Chavez</h4>
+                            <p class="text-roast-600" style="font-size: 0.75rem; font-weight: 500;">Pastry Chef</p>
                         </div>
+
                         <div class="team-member">
-                            <img src="kyllesiazon.jpg" class="team-avatar">
-                            <h4>Kylle Siazon</h4>
-                            <span class="team-role">Barista</span>
+                            <div class="avatar">
+                                <img src="kyllesiazon.jpg" alt="Kylle Siazon">
+                            </div>
+                            <h4 class="font-bold text-roast-950" style="font-size: 1rem;">Kylle Siazon</h4>
+                            <p class="text-roast-600" style="font-size: 0.75rem; font-weight: 500;">Barista</p>
                         </div>
+
                         <div class="team-member">
-                            <img src="justindwayne.jpg" class="team-avatar">
-                            <h4>Justin Ronquillo</h4>
-                            <span class="team-role">Lead Roster</span>
+                            <div class="avatar">
+                                <img src="justindwayne.jpg" alt="Justin Ronquillo">
+                            </div>
+                            <h4 class="font-bold text-roast-950" style="font-size: 1rem;">Justin Ronquillo</h4>
+                            <p class="text-roast-600" style="font-size: 0.75rem; font-weight: 500;">Lead Roaster</p>
                         </div>
+
                         <div class="team-member">
-                            <img src="rj.jpg" class="team-avatar">
-                            <h4>RJ Agresor</h4>
-                            <span class="team-role">Operations</span>
+                            <div class="avatar">
+                                <img src="rj.jpg" alt="RJ Agresor">
+                            </div>
+                            <h4 class="font-bold text-roast-950" style="font-size: 1rem;">RJ Agresor</h4>
+                            <p class="text-roast-600" style="font-size: 0.75rem; font-weight: 500;">Operations</p>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="values-grid">
-                <div class="card">
-                    <div class="card-icon"><i data-lucide="award"></i></div>
-                    <h3>Craftsmanship</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">We carefully measure, grind, and brew every single cup to bring out absolute peak flavor.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i data-lucide="globe"></i></div>
-                    <h3>Ethical Sourcing</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Direct trade partnerships ensuring fair wage practices for independent farmers worldwide.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon"><i data-lucide="heart"></i></div>
-                    <h3>Community</h3>
-                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Designing inclusive, minimalist spaces made to share moments and ideas together.</p>
-                </div>
             </div>
         </section>
 
-        <!-- media, mga videos/pics -->
-        <section id="media">
-            <div class="media-section">
-                <div class="section-header">
-                    <h2>Inside Our Café</h2>
-                    <p>Experience the atmosphere before your visit.</p>
+        <!-- Inside Our Café Showcase -->
+        <section id="media" class="section-padding bg-cream">
+            <div class="container">
+                
+                <div class="text-center-block">
+                    <span class="section-subtitle">Café Atmosphere</span>
+                    <h2 class="section-title">Inside Café Xixi</h2>
+                    <p class="text-roast-800" style="font-size: 1rem; margin-top: 0.5rem;">Experience the warm ambiance and soothing soundscapes before your visit.</p>
                 </div>
+
                 <div class="media-grid">
-                    <div class="media-card">
-                        <h3><i data-lucide="film" style="vertical-align: middle;"></i> A Morning at Café Xixi</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Watch a short virtual tour of our espresso bar in action.</p>
-                        <video controls>
-                            <source src="cafevlog.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                    
+                    <!-- Video Card -->
+                    <div class="video-card">
+                        <div class="card-header-flex">
+                            <div class="flex-center-gap">
+                                <i data-lucide="film" style="width: 1.25rem; height: 1.25rem; color: var(--roast-400);"></i>
+                                <span class="font-serif" style="font-weight: 600; font-size: 1.125rem;">A Morning at Café Xixi</span>
+                            </div>
+                            <span style="font-size: 0.75rem; background-color: var(--roast-800); color: var(--roast-200); padding: 0.25rem 0.75rem; border-radius: 9999px;">Virtual Tour</span>
+                        </div>
+
+                        <div class="video-wrapper">
+                            <video controls class="w-full h-full object-cover">
+                                <source src="cafevlog.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <p style="font-size: 0.75rem; color: var(--roast-400); margin-top: 0.75rem; padding: 0 0.5rem;">
+                            Take a peek behind the espresso bar as our baristas prepare morning brews.
+                        </p>
                     </div>
-                    <div class="media-card">
-                        <h3><i data-lucide="music" style="vertical-align: middle;"></i> Coffeehouse Vibes</h3>
-                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Listen to our curated lo-fi jazz playlist selection.</p>
-                        <audio controls style="margin-top: 2rem;">
-                            <source src="5 min sound - renz.mp3" type="audio/mpeg">
-                            Your browser does not support the audio element.
-                        </audio>
+
+                    <!-- Audio Showcase Widget -->
+                    <div class="audio-card">
+                        <div class="audio-bg-icon">
+                            <i data-lucide="music-4" style="width: 8rem; height: 8rem; color: var(--white);"></i>
+                        </div>
+
+                        <div>
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+                                <span class="uppercase tracking-wider" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.75rem; font-weight: 700; color: var(--roast-400);">
+                                    <i data-lucide="radio" style="width: 1rem; height: 1rem;"></i> Live Radio Lounge
+                                </span>
+                                <span style="font-size: 0.75rem; background-color: rgba(122, 72, 51, 0.8); color: var(--roast-300); padding: 0.25rem 0.75rem; border-radius: 9999px; border: 1px solid var(--roast-700);">Lo-Fi Jazz</span>
+                            </div>
+
+                            <h3 class="font-serif" style="font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem;">Coffeehouse Vibes</h3>
+                            <p style="font-size: 0.875rem; color: var(--roast-300);">Curated soothing acoustic & chill lo-fi track for focused work or relaxation.</p>
+                        </div>
+
+                        <!-- Equalizer Graphic -->
+                        <div class="eq-container">
+                            <div class="eq-bar" style="background-color: var(--roast-500);"></div>
+                            <div class="eq-bar" style="background-color: var(--roast-400);"></div>
+                            <div class="eq-bar" style="background-color: var(--roast-300);"></div>
+                            <div class="eq-bar" style="background-color: var(--roast-500);"></div>
+                            <div class="eq-bar" style="background-color: var(--roast-400);"></div>
+                        </div>
+
+                        <div>
+                            <audio controls style="width: 100%;">
+                                <source src="5 min sound - renz.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
                     </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Featured Signature Drink Highlight -->
+        <section id="featured" class="section-padding bg-roast-dark">
+            <div class="container">
+                <div class="signature-card">
+                    
+                    <!-- Left Image Showcase -->
+                    <div class="sig-img-col">
+                        <img src="signaturedrink.png" 
+                             onerror="this.src='https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1000&q=80'" 
+                             alt="Xixi's Iced Caramel Macchiato">
+                        <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(28, 25, 23, 0.8), transparent);"></div>
+                        <div style="position: absolute; top: 1.5rem; left: 1.5rem;">
+                            <span class="uppercase tracking-wider font-bold" style="padding: 0.375rem 1rem; border-radius: 9999px; background-color: var(--roast-500); color: var(--roast-950); font-size: 0.75rem;">
+                                Signature Highlight
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Right Description -->
+                    <div class="sig-info-col">
+                        <div>
+                            <h2 class="font-serif font-bold" style="font-size: 2.25rem; color: var(--roast-50); line-height: 1.25;">
+                                Xixi's Iced Caramel Macchiato
+                            </h2>
+                            <p class="font-serif font-bold" style="font-size: 1.5rem; color: var(--roast-400); margin-top: 0.5rem;">₱360.00</p>
+                        </div>
+
+                        <p style="color: var(--roast-200); font-size: 1rem; line-height: 1.625;">
+                            A beautiful layered classic crafted with finesse. Rich, full-bodied double espresso poured gently over ice-cold creamy milk and handcrafted Madagascar vanilla bean syrup, finished with a rich drizzle of sweet buttery caramel.
+                        </p>
+
+                        <div style="padding-top: 1rem;">
+                            <button onclick="addToCart('Xixi\'s Iced Macchiato', 5.75)" class="btn-primary" style="background-color: var(--roast-500); color: var(--roast-950); font-weight: 700; border: none; cursor: pointer;">
+                                <i data-lucide="plus" style="width: 1.25rem; height: 1.25rem; margin-right: 0.5rem;"></i>
+                                Add to Order (₱360.00)
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- signature drink natin -->
-        <section id="featured">
-            <div class="featured-c">
-                <img src="signaturedrink.png" alt="Signature Drink" class="featured-image">
-                <div class="featured-content">
-                    <span class="badge">Signature Highlight</span>
-                    <h2>Xixi's Iced Caramel Macchiato</h2>
-                    <p style="color: var(--text-muted);">A beautiful layered classic. Rich, full-bodied espresso poured over cold, creamy milk and sweet vanilla syrup, served over ice and finished with a decadent drizzle of buttery caramel.</p>
-                    <div class="price">$5.75</div>
+        <!-- Menu Section -->
+        <section id="menu" class="section-padding bg-cream">
+            <div class="container">
+                
+                <div class="text-center-block">
+                    <span class="section-subtitle">Crafted Fresh Daily</span>
+                    <h2 class="section-title">Our Menu</h2>
+                    <p class="text-roast-800" style="font-size: 1rem; margin-top: 0.75rem;">Prepared with precision by our baristas and in-house pastry chefs.</p>
+                </div>
+
+                <!-- ADS / PROMO BANNER BOX -->
+                <div class="ad-banner-box">
                     <div>
-                        <a href="#menu" class="button">View All Menu Items</a>
+                        <span class="ad-badge">Special Promo</span>
+                        <h3 class="font-serif" style="font-size: 1.75rem; font-weight: 700;">Buy Any 2 Pastries, Get 1 Free Coffee!</h3>
+                        <p style="font-size: 0.875rem; color: var(--roast-200); margin-top: 0.5rem;">Valid every morning from 7 AM - 10 AM. Applicable for online & in-store pickups.</p>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- MENU SECTION -->
-        <section id="menu">
-            <div class="section-header">
-                <h2>Our Menu</h2>
-                <p>Crafted fresh daily by our baristas and in-house pastry chefs.</p>
-            </div>
-            
-            <div class="menu-grid">
-                <!-- Drinks -->
-                <div class="menu-item">
-                    <img src="espresso.png" alt="Espresso">
-                    <div class="menu-item-info">
-                        <h4>Espresso / Americano</h4>
-                        <p>Bold, concentrated shot or smoothed out with hot water.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="latte.png" alt="Latte">
-                    <div class="menu-item-info">
-                        <h4>Café Latte</h4>
-                        <p>Rich espresso balanced with smooth, creamy steamed milk.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="mocha.png" alt="Mocha">
-                    <div class="menu-item-info">
-                        <h4>Mocha</h4>
-                        <p>Espresso, steamed milk, and sweet dark chocolate syrup.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="tea.png" alt="Tea">
-                    <div class="menu-item-info">
-                        <h4>Premium Tea</h4>
-                        <p>Freshly brewed herbal or loose-leaf black tea selections.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="xixi.png" alt="Iced Caramel Macchiato">
-                    <div class="menu-item-info">
-                        <h4>Xixi's Iced Macchiato</h4>
-                        <p>Layered cold brew, milk, sweet cream, and caramel drizzle.</p>
-                    </div>
-                </div>
-                <!-- mga tinapay -->
-                <div class="menu-item">
-                    <img src="brownie.png" alt="Brownie">
-                    <div class="menu-item-info">
-                        <h4>Chocolate Brownie</h4>
-                        <p>Rich, fudgy chocolate brownie baked fresh with soft center.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="image (76).png" alt="Butter Croissant">
-                    <div class="menu-item-info">
-                        <h4>Butter Croissant</h4>
-                        <p>Traditional French pastry: flaky, golden, and buttery.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="cupcake.png" alt="Cupcake">
-                    <div class="menu-item-info">
-                        <h4>Vanilla Cupcake</h4>
-                        <p>Fluffy vanilla cake topped with sweet buttercream frosting.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="cookie.png" alt="Cookie">
-                    <div class="menu-item-info">
-                        <h4>Chocolate Chip Cookie</h4>
-                        <p>Classic soft-baked cookie loaded with gooey chocolate chips.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="muffin.png" alt="Muffin">
-                    <div class="menu-item-info">
-                        <h4>Blueberry Muffin</h4>
-                        <p>Moist, fluffy bakery muffin packed with sweet wild blueberries.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="sandwich.png" alt="Ham Croissant">
-                    <div class="menu-item-info">
-                        <h4>Ham & Cheese Croissant</h4>
-                        <p>Warmed croissant with sliced smoked ham and melted cheese.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="cheesecake.png" alt="Cheesecake">
-                    <div class="menu-item-info">
-                        <h4>New York Cheesecake</h4>
-                        <p>Rich, creamy cheesecake on a graham cracker crust.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- events inquiry -->
-        <section id="events">
-            <div class="section-header">
-                <h2>Events & Catering</h2>
-                <p>Bring Café Xixi to your private parties and corporate events.</p>
-            </div>
-            <div class="events-grid">
-                <div>
-                    <h3>Resources & Links</h3>
-                    <p style="color: var(--text-muted); margin: 1rem 0;">Download our PDF guides or view third-party reviews:</p>
-                    <ul style="display: flex; flex-direction: column; gap: 1rem;">
-                        <li>
-                            <a href="fullpriceguide.pdf" target="_blank" class="button button-outline" style="width: 100%; justify-content: flex-start;">
-                                <i data-lucide="file-text"></i> Full Pricing Guide (PDF)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="cateringmenu.pdf" target="_blank" class="button button-outline" style="width: 100%; justify-content: flex-start;">
-                                <i data-lucide="file-text"></i> Catering Menu (PDF)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.yelp.com" target="_blank" class="button button-outline" style="width: 100%; justify-content: flex-start;">
-                                <i data-lucide="star"></i> Read Reviews on Yelp
-                            </a>
-                        </li>
-                    </ul>
+                    <a href="#events" class="btn-primary" style="background-color: var(--amber-400); color: var(--roast-950); font-weight: 700; flex-shrink: 0;">
+                        Claim Offer
+                    </a>
                 </div>
 
-                <div class="card">
-                    <h3>Catering Inquiry</h3>
-                    <form id="cateringForm" style="margin-top: 1.5rem;">
-                        <div class="form-group">
-                            <label for="c-name">Full Name / Organization</label>
-                            <input type="text" id="c-name" class="form-control" placeholder="Jane Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="c-email">Email Address</label>
-                            <input type="email" id="c-email" class="form-control" placeholder="jane@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="c-date">Requested Event Date</label>
-                            <input type="date" id="c-date" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="c-notes">Dietary Restrictions & Details</label>
-                            <textarea id="c-notes" class="form-control" rows="3" placeholder="Specify vegan, gluten-free, or dairy-free requirements..."></textarea>
-                        </div>
-                        <button type="submit" class="button" style="width: 100%; justify-content: center;">Submit Catering Request</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- contact natin -->
-        <section id="contact">
-            <div class="events-grid">
-                <div>
-                    <h2>Visit & Connect</h2>
-                    <p style="color: var(--text-muted); margin: 1rem 0;">We'd love to serve you. Drop by our shop or get in touch below.</p>
+                <!-- Menu Items Grid -->
+                <div class="menu-grid">
                     
-                    <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
-                        <p><strong>Phone:</strong> (555) 4567-COM</p>
-                        <p><strong>Email:</strong> <a href="mailto:hello@cafexixi.com" style="color: var(--primary);">hello@cafexixi.com</a></p>
-                        <p><strong>Location:</strong> 123 Way, Coffee City</p>
+                    <!-- Item 1 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="espresso.png" onerror="this.src='https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=500&q=80'" alt="Espresso">
+                                <span class="price-badge">₱160.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Espresso / Americano</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Bold, concentrated double shot or smoothed out with hot filtered water.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Espresso / Americano', 160.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
                     </div>
 
-                    <!-- iframe natin -->
-                    <div style="margin-top: 2rem; width: 100%; overflow: hidden; border-radius: var(--radius); border: 1px solid var(--border); box-shadow: var(--shadow);">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.37368486893!2d121.09619684920547!3d14.634716839898607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9ae9ec4a55b%3A0xa37b747461847a2c!2sStarbucks%20Sumulong%20Highway%20Drive%20Thru!5e0!3m2!1sen!2sph!4v1785765374748!5m2!1sen!2sph"
-                            width="100%" 
-                            height="250" 
-                            style="border:0;"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                    
-                    <div style="margin-top: 2rem;">
-                        <h4>Follow Us</h4>
-                        <div class="social-links">
-                            <a href="https://instagram.com/nathandec0c0/" target="_blank" aria-label="Instagram"><img src="iglogo.png" width="30px" height="30px"></a>
-                            <a href="https://facebook.com/nathancoconat" target="_blank" aria-label="Facebook"><img src="fblogo.png" width="30px" height="30px"></a>
+                    <!-- Item 2 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="latte.png" onerror="this.src='https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=500&q=80'" alt="Café Latte">
+                                <span class="price-badge">₱300.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Café Latte</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Rich espresso balanced with silky smooth, creamy steamed whole milk.</p>
                         </div>
+                        <button class="btn-add-cart" onclick="addToCart('Café Latte', 300.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
                     </div>
+
+                    <!-- Item 3 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="mocha.png" onerror="this.src='https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=500&q=80'" alt="Mocha">
+                                <span class="price-badge">₱300.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Mocha</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Espresso, steamed milk, and rich artisanal dark chocolate syrup.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Mocha', 300.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="tea.png" onerror="this.src='https://images.unsplash.com/photo-1576092768241-dec231879fc3?auto=format&fit=crop&w=500&q=80'" alt="Premium Tea">
+                                <span class="price-badge">₱240.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Premium Tea</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Freshly brewed organic herbal infusions or loose-leaf black tea blends.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Premium Tea', 240.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="xixi.png" onerror="this.src='https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=500&q=80'" alt="Xixi Macchiato">
+                                <span class="price-badge-highlight">₱360.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Xixi's Iced Macchiato</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Layered cold brew, sweet cream, vanilla, and buttery caramel drizzle.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Xixi\'s Iced Macchiato', 360.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="brownie.png" onerror="this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=500&q=80'" alt="Chocolate Brownie">
+                                <span class="price-badge">₱180.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Chocolate Brownie</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Rich, fudgy dark chocolate brownie baked fresh daily with a gooey center.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Chocolate Brownie', 180.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="image (76).png" onerror="this.src='https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80'" alt="Butter Croissant">
+                                <span class="price-badge">₱240.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Butter Croissant</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Traditional French pastry: flaky, golden outer layer with buttery interior.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Butter Croissant', 240.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="cupcake.png" onerror="this.src='https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?auto=format&fit=crop&w=500&q=80'" alt="Vanilla Cupcake">
+                                <span class="price-badge">₱180.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Vanilla Cupcake</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Fluffy vanilla bean cake topped with whipped buttercream frosting.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Vanilla Cupcake', 180.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="cookie.png" onerror="this.src='https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=500&q=80'" alt="Chocolate Chip Cookie">
+                                <span class="price-badge">₱180.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Chocolate Chip Cookie</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Classic soft-baked cookie packed with melted chocolate chunks.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Chocolate Chip Cookie', 180.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="muffin.png" onerror="this.src='https://images.unsplash.com/photo-1607958996333-41aef7caefaa?auto=format&fit=crop&w=500&q=80'" alt="Blueberry Muffin">
+                                <span class="price-badge">₱240.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Blueberry Muffin</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Moist bakery muffin bursting with fresh wild organic blueberries.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Blueberry Muffin', 240.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 11 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="sandwich.png" onerror="this.src='https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=500&q=80'" alt="Ham Croissant">
+                                <span class="price-badge">₱430</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">Ham & Cheese Croissant</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Warm flaky croissant stuffed with sliced smoked ham and melted Gruyère.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('Ham & Cheese Croissant', 430.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
+                    <!-- Item 12 -->
+                    <div class="menu-item">
+                        <div>
+                            <div class="menu-thumb">
+                                <img src="cheesecake.png" onerror="this.src='https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=500&q=80'" alt="Cheesecake">
+                                <span class="price-badge">₱300.00</span>
+                            </div>
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.125rem; font-weight: 700;">New York Cheesecake</h3>
+                            <p class="text-roast-800" style="font-size: 0.75rem; margin-top: 0.25rem;">Rich, velvety cheesecake on a buttery honey graham cracker crust.</p>
+                        </div>
+                        <button class="btn-add-cart" onclick="addToCart('New York Cheesecake', 300.00)">
+                            <i data-lucide="plus" style="width: 1rem; height: 1rem;"></i> Add to Cart
+                        </button>
+                    </div>
+
                 </div>
 
-                <div class="card">
-                    <h3>Send Us a Message</h3>
-                    <form id="contactForm" style="margin-top: 1.5rem;">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message & Inquiry</label>
-                            <textarea id="message" class="form-control" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="button" style="width: 100%; justify-content: center;">Send Message</button>
-                    </form>
-                </div>
             </div>
         </section>
+
+        <!-- Catering & Events Section -->
+        <section id="events" class="section-padding bg-roast-light">
+            <div class="container">
+                
+                <div class="text-center-block">
+                    <span class="section-subtitle">Events & Gatherings</span>
+                    <h2 class="section-title">Private Catering</h2>
+                    <p class="text-roast-800" style="font-size: 1rem; margin-top: 0.5rem;">Bring Café Xixi’s mobile espresso bar and artisanal bakeries to your corporate events.</p>
+                </div>
+
+                <div class="two-col-grid">
+                    
+                    <!-- Left Downloadable Guides -->
+                    <div class="col-left-5">
+                        <div class="card-panel">
+                            <h3 class="font-serif text-roast-950" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem;">Catering Resources</h3>
+                            <p class="text-roast-800" style="font-size: 0.875rem; margin-bottom: 1.5rem;">
+                                Explore full package options, dietary breakdown, and community feedback before submitting your inquiry.
+                            </p>
+
+                            <div>
+                                <a href="fullpriceguide.pdf" download target="_blank" class="pdf-link">
+                                    <span class="flex-center-gap">
+                                        <i data-lucide="file-text" style="width: 1.25rem; height: 1.25rem; color: var(--roast-600);"></i> Full Pricing Guide (PDF)
+                                    </span>
+                                    <i data-lucide="download" style="width: 1rem; height: 1rem; color: var(--roast-400);"></i>
+                                </a>
+
+                                <a href="cateringmenu.pdf" download target="_blank" class="pdf-link">
+                                    <span class="flex-center-gap">
+                                        <i data-lucide="file-text" style="width: 1.25rem; height: 1.25rem; color: var(--roast-600);"></i> Catering Menu (PDF)
+                                    </span>
+                                    <i data-lucide="download" style="width: 1rem; height: 1rem; color: var(--roast-400);"></i>
+                                </a>
+
+                                <a href="https://www.yelp.com" target="_blank" class="pdf-link">
+                                    <span class="flex-center-gap" style="color: var(--red-600);">
+                                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; fill: var(--red-500);"></i> Read Reviews on Yelp
+                                    </span>
+                                    <i data-lucide="external-link" style="width: 1rem; height: 1rem; color: var(--roast-400);"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Catering Request -->
+                    <div class="col-right-7 card-panel shadow-xl-panel">
+                        <h3 class="font-serif text-roast-950" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Request Event Catering</h3>
+                        <p class="text-roast-800" style="font-size: 0.75rem; margin-bottom: 1.5rem;">Fill out details below and our team will reply within 24 hours.</p>
+
+                        <form class="form-space">
+                            <div class="form-row">
+                                <div>
+                                    <label class="form-label">Full Name / Org</label>
+                                    <input type="text" placeholder="Jane Doe" class="form-input">
+                                </div>
+                                <div>
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" placeholder="jane@example.com" class="form-input">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="form-label">Requested Event Date</label>
+                                <input type="date" class="form-input">
+                            </div>
+
+                            <div>
+                                <label class="form-label">Details & Dietary Requirements</label>
+                                <textarea rows="4" placeholder="Specify guest count, vegan, gluten-free, or espresso bar needs..." class="form-textarea"></textarea>
+                            </div>
+
+                            <button type="button" class="btn-submit">
+                                Submit Catering Request
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact & Visit Section -->
+        <section id="contact" class="section-padding bg-cream">
+            <div class="container">
+                
+                <div class="two-col-grid">
+                    
+                    <!-- Left Contact Details & Map -->
+                    <div class="col-left-6">
+                        <div style="margin-bottom: 2rem;">
+                            <span class="section-subtitle">Visit Us</span>
+                            <h2 class="section-title">Connect & Visit</h2>
+                            <p class="text-roast-800" style="font-size: 1rem; margin-top: 0.5rem;">We'd love to serve you. Drop by our sanctuary or reach out anytime.</p>
+                        </div>
+
+                        <div>
+                            <div class="contact-card">
+                                <div class="contact-icon-bg">
+                                    <i data-lucide="phone" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </div>
+                                <div>
+                                    <p class="uppercase font-bold text-roast-600" style="font-size: 0.75rem;">Call Us</p>
+                                    <p class="font-bold text-roast-900" style="font-size: 0.875rem;">(555) 4567-COM</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon-bg">
+                                    <i data-lucide="mail" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </div>
+                                <div>
+                                    <p class="uppercase font-bold text-roast-600" style="font-size: 0.75rem;">Email Us</p>
+                                    <a href="mailto:westside4167@gmail.com" class="font-bold text-roast-600" style="font-size: 0.875rem;">westside4167@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-card">
+                                <div class="contact-icon-bg">
+                                    <i data-lucide="map-pin" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </div>
+                                <div>
+                                    <p class="uppercase font-bold text-roast-600" style="font-size: 0.75rem;">Location</p>
+                                    <p class="font-bold text-roast-900" style="font-size: 0.875rem;">J3QX+F96 Paliparan Subd, 7 1st St, Marikina, 1800 Metro Manila</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Embedded Google Map -->
+                        <div class="map-wrapper">
+                            <iframe 
+                                iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3860.305176344681!2d121.09603512510675!3d14.638610235852218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b9cbb86673b5%3A0x5ab26f9518810b2d!2sNational%20Christian%20Life%20College!5e0!3m2!1sen!2sph!4v1788784109955!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                                style="width: 100%; height: 100%; border: 0;" 
+                                allowfullscreen="" 
+                                loading="lazy">
+                            </iframe>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div>
+                            <h4 class="font-bold uppercase tracking-wider text-roast-950" style="font-size: 0.875rem; margin-bottom: 0.75rem;">Follow Our Journey</h4>
+                            <div class="flex-center-gap">
+                                <a href="https://instagram.com/nathandec0c0/" target="_blank" class="social-circle">
+                                    <i data-lucide="instagram" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </a>
+                                <a href="https://facebook.com/nathancoconat" target="_blank" class="social-circle">
+                                    <i data-lucide="facebook" style="width: 1.25rem; height: 1.25rem;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Contact Form -->
+                    <div class="col-right-6 card-panel shadow-xl-panel" style="background-color: var(--white);">
+                        <h3 class="font-serif text-roast-950" style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Send Us a Message</h3>
+                        <p class="text-roast-800" style="font-size: 0.75rem; margin-bottom: 1.5rem;">Have questions or feedback? We’re always listening.</p>
+
+                        <form class="form-space">
+                            <div>
+                                <label class="form-label">Your Name</label>
+                                <input type="text" placeholder="Alex Morgan" class="form-input form-input-cream">
+                            </div>
+
+                            <div>
+                                <label class="form-label">Email Address</label>
+                                <input type="email" placeholder="alex@example.com" class="form-input form-input-cream">
+                            </div>
+
+                            <div>
+                                <label class="form-label">Message</label>
+                                <textarea rows="5" placeholder="Tell us how we can help..." class="form-textarea form-input-cream"></textarea>
+                            </div>
+
+                            <button type="button" class="btn-submit">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <!-- footer natin -->
+    <!-- LIVE CHAT SUPPORT WIDGET (Fixed bottom right) -->
+    <div class="chat-widget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--emerald-500);"></div>
+                    <span style="font-weight: 600; font-size: 0.875rem;">Café Xixi Support</span>
+                </div>
+                <button onclick="toggleChat()" style="background: none; border: none; color: var(--white); cursor: pointer;">
+                    <i data-lucide="x" style="width: 1rem; height: 1rem;"></i>
+                </button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-msg bot">Hi there! 👋 Welcome to Café Xixi. How can we help you today?</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" id="chatInput" placeholder="Type a message..." onkeypress="handleChatKey(event)">
+                <button onclick="sendChatMessage()"><i data-lucide="send" style="width: 0.875rem; height: 0.875rem;"></i></button>
+            </div>
+        </div>
+        <button class="chat-button" onclick="toggleChat()" aria-label="Toggle Live Chat">
+            <i data-lucide="message-square" style="width: 1.5rem; height: 1.5rem;"></i>
+            <span class="online-badge"></span>
+        </button>
+    </div>
+
+    <!-- SHOPPING CART DRAWER & OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3 class="font-serif" style="font-size: 1.25rem; font-weight: 700;">Your Order</h3>
+            <button onclick="toggleCart()" style="background: none; border: none; cursor: pointer; color: var(--roast-900);">
+                <i data-lucide="x" style="width: 1.25rem; height: 1.25rem;"></i>
+            </button>
+        </div>
+        <div class="cart-body" id="cartItemsList">
+            <p style="text-align: center; color: var(--roast-600); font-size: 0.875rem; margin-top: 2rem;">Your cart is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotalPrice">₱0.00</span>
+            </div>
+            <button class="btn-submit" onclick="alert('Thank you for your order! Processing...')">Checkout Now</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div>
-                    <h3 style="color: #fff; margin-bottom: 1rem;">Café Xixi</h3>
-                    <p>A minimalist escape serving small-batch roasts and artisanal pastries daily.</p>
+                
+                <div class="foot-col-6">
+                    <div class="flex-center-gap" style="margin-bottom: 1rem;">
+                        <div class="logo-badge" style="background-color: var(--roast-500); color: var(--roast-950); width: 2rem; height: 2rem; font-size: 1.125rem;">
+                            X
+                        </div>
+                        <span class="font-serif font-bold" style="font-size: 1.5rem; color: var(--white); letter-spacing: -0.025em;">Café Xixi</span>
+                    </div>
+                    <p class="text-roast-400" style="font-size: 0.875rem; max-width: 24rem; line-height: 1.625;">
+                        A minimalist escape serving small-batch roasts, single-origin pour-overs, and artisanal baked goods daily.
+                    </p>
                 </div>
-                <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <p><a href="#about">Our Story</a></p>
-                    <p><a href="#menu">Menu</a></p>
-                    <p><a href="#events">Catering</a></p>
+
+                <div class="foot-col-3">
+                    <h4 class="font-bold uppercase tracking-wider" style="color: var(--white); font-size: 0.875rem;">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">Our Story</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#events">Catering</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Legal</h4>
-                    <p><a href="#privacy">Privacy Policy</a></p>
-                    <p><a href="#terms">Terms of Service</a></p>
+
+                <div class="foot-col-3">
+                    <h4 class="font-bold uppercase tracking-wider" style="color: var(--white); font-size: 0.875rem;">Legal & Hours</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li style="padding-top: 0.5rem; font-size: 0.75rem; color: #a8a29e;">Mon-Sun: 7am - 8pm</li>
+                    </ul>
                 </div>
+
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2026 Café Xixi. All rights reserved.</p>
-                <p>Designed by Group 2</p>
+                <p>Designed with care by <span style="color: var(--roast-300); font-weight: 600;">Group 2</span></p>
             </div>
         </div>
     </footer>
 
+    <!-- Interactive Scripts for Chat & Cart -->
     <script>
         lucide.createIcons();
+
+        /* Cart Functionality */
+        let cart = [];
+
+        function toggleCart() {
+            document.getElementById('cartDrawer').classList.toggle('active');
+            document.getElementById('cartOverlay').classList.toggle('active');
+        }
+
+        function addToCart(name, price) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.qty += 1;
+            } else {
+                cart.push({ name, price, qty: 1 });
+            }
+            updateCartUI();
+            toggleCart();
+        }
+
+        function updateCartUI() {
+            const list = document.getElementById('cartItemsList');
+            const totalEl = document.getElementById('cartTotalPrice');
+            const countEl = document.getElementById('cartBadgeCount');
+
+            let total = 0;
+            let count = 0;
+
+            if (cart.length === 0) {
+                list.innerHTML = `<p style="text-align: center; color: var(--roast-600); font-size: 0.875rem; margin-top: 2rem;">Your cart is currently empty.</p>`;
+            } else {
+                list.innerHTML = cart.map(item => {
+                    total += item.price * item.qty;
+                    count += item.qty;
+                    return `
+                        <div class="cart-item">
+                            <div>
+                                <h4 style="font-size: 0.875rem; font-weight: 600;">${item.name}</h4>
+                                <span style="font-size: 0.75rem; color: var(--roast-600);">₱${item.price.toFixed(2)} x ${item.qty}</span>
+                            </div>
+                            <span style="font-weight: 700; font-size: 0.875rem;">₱${(item.price * item.qty).toFixed(2)}</span>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            totalEl.innerText = `₱${total.toFixed(2)}`;
+            countEl.innerText = count;
+        }
+
+        /* Live Chat Functionality */
+        function toggleChat() {
+            const win = document.getElementById('chatWindow');
+            win.classList.toggle('active');
+        }
+
+        function sendChatMessage() {
+            const input = document.getElementById('chatInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const body = document.getElementById('chatBody');
+            
+            // User Msg
+            const userMsg = document.createElement('div');
+            userMsg.className = 'chat-msg user';
+            userMsg.innerText = text;
+            body.appendChild(userMsg);
+
+            input.value = '';
+            body.scrollTop = body.scrollHeight;
+
+            // Auto Bot Reply
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'chat-msg bot';
+                botMsg.innerText = "Thanks for reaching out! A member of our team will get back to you shortly.";
+                body.appendChild(botMsg);
+                body.scrollTop = body.scrollHeight;
+            }, 1000);
+        }
+
+        function handleChatKey(e) {
+            if (e.key === 'Enter') sendChatMessage();
+        }
     </script>
 </body>
 </html>
